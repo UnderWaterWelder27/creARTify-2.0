@@ -72,21 +72,21 @@ class CommonButton extends StatelessWidget {
         side: borderColor != null
             ? BorderSide(color: borderColor!)
             : _isOutlined
-                ? BorderSide(color: colors.primary)
+                ? BorderSide(color: colors.activeLight)
                 : null,
         padding: EdgeInsets.zero,
         shadowColor: Colors.transparent,
         shape: border,
         backgroundColor: isDisabled
-            ? colors.primary.withOpacity(0.38)
-            : backgroundColor ?? (_isOutlined ? Colors.transparent : colors.primary),
+            ? colors.inactiveDark.withOpacity(0.38)
+            : backgroundColor ?? (_isOutlined ? Colors.transparent : colors.primaryForeground),
         foregroundColor: _isOutlined ? Colors.transparent : textColor,
       ),
       child: child ??
           Text(
             label,
             style: context.typography.headlineSmall?.copyWith(
-              color: _isOutlined ? colors.primary : Colors.white,
+              color: _isOutlined ? colors.textBlack : Colors.white,
             ),
             textAlign: textAlign,
           ),

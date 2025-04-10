@@ -1,3 +1,3 @@
 class Apis {
-  static String get login => 'login';
+  static String get api => '/api';
 }

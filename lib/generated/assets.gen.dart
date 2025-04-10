@@ -7,42 +7,19 @@
 // ignore_for_file: type=lint
 // ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use
 
-import 'package:flutter/widgets.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:vector_graphics/vector_graphics.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_svg/flutter_svg.dart' as _svg;
+import 'package:vector_graphics/vector_graphics.dart' as _vg;
 
 class $AssetsFontsGen {
   const $AssetsFontsGen();
 
-  /// File path: assets/fonts/CenturyGothicPaneuropeanBold.ttf
-  String get centuryGothicPaneuropeanBold =>
-      'assets/fonts/CenturyGothicPaneuropeanBold.ttf';
-
-  /// File path: assets/fonts/CenturyGothicPaneuropeanExtraBold.ttf
-  String get centuryGothicPaneuropeanExtraBold =>
-      'assets/fonts/CenturyGothicPaneuropeanExtraBold.ttf';
-
-  /// File path: assets/fonts/CenturyGothicPaneuropeanLight.ttf
-  String get centuryGothicPaneuropeanLight =>
-      'assets/fonts/CenturyGothicPaneuropeanLight.ttf';
-
-  /// File path: assets/fonts/CenturyGothicPaneuropeanRegular.ttf
-  String get centuryGothicPaneuropeanRegular =>
-      'assets/fonts/CenturyGothicPaneuropeanRegular.ttf';
-
-  /// File path: assets/fonts/CenturyGothicPaneuropeanSemiBold.ttf
-  String get centuryGothicPaneuropeanSemiBold =>
-      'assets/fonts/CenturyGothicPaneuropeanSemiBold.ttf';
+  /// File path: assets/fonts/TTNorms-Medium.otf
+  String get tTNormsMedium => 'assets/fonts/TTNorms-Medium.otf';
 
   /// List of all assets
-  List<String> get values => [
-        centuryGothicPaneuropeanBold,
-        centuryGothicPaneuropeanExtraBold,
-        centuryGothicPaneuropeanLight,
-        centuryGothicPaneuropeanRegular,
-        centuryGothicPaneuropeanSemiBold
-      ];
+  List<String> get values => [tTNormsMedium];
 }
 
 class $AssetsIconsGen {
@@ -77,31 +54,25 @@ class $AssetsIconsBottomBarGen {
 }
 
 class Assets {
-  Assets._();
+  const Assets._();
 
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
 }
 
 class SvgGenImage {
-  const SvgGenImage(
-    this._assetName, {
-    this.size,
-    this.flavors = const {},
-  }) : _isVecFormat = false;
+  const SvgGenImage(this._assetName, {this.size, this.flavors = const {}})
+    : _isVecFormat = false;
 
-  const SvgGenImage.vec(
-    this._assetName, {
-    this.size,
-    this.flavors = const {},
-  }) : _isVecFormat = true;
+  const SvgGenImage.vec(this._assetName, {this.size, this.flavors = const {}})
+    : _isVecFormat = true;
 
   final String _assetName;
   final Size? size;
   final Set<String> flavors;
   final bool _isVecFormat;
 
-  SvgPicture svg({
+  _svg.SvgPicture svg({
     Key? key,
     bool matchTextDirection = false,
     AssetBundle? bundle,
@@ -114,29 +85,29 @@ class SvgGenImage {
     WidgetBuilder? placeholderBuilder,
     String? semanticsLabel,
     bool excludeFromSemantics = false,
-    SvgTheme? theme,
+    _svg.SvgTheme? theme,
     ColorFilter? colorFilter,
     Clip clipBehavior = Clip.hardEdge,
     @deprecated Color? color,
     @deprecated BlendMode colorBlendMode = BlendMode.srcIn,
     @deprecated bool cacheColorFilter = false,
   }) {
-    final BytesLoader loader;
+    final _svg.BytesLoader loader;
     if (_isVecFormat) {
-      loader = AssetBytesLoader(
+      loader = _vg.AssetBytesLoader(
         _assetName,
         assetBundle: bundle,
         packageName: package,
       );
     } else {
-      loader = SvgAssetLoader(
+      loader = _svg.SvgAssetLoader(
         _assetName,
         assetBundle: bundle,
         packageName: package,
         theme: theme,
       );
     }
-    return SvgPicture(
+    return _svg.SvgPicture(
       loader,
       key: key,
       matchTextDirection: matchTextDirection,
@@ -148,7 +119,8 @@ class SvgGenImage {
       placeholderBuilder: placeholderBuilder,
       semanticsLabel: semanticsLabel,
       excludeFromSemantics: excludeFromSemantics,
-      colorFilter: colorFilter ??
+      colorFilter:
+          colorFilter ??
           (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
       clipBehavior: clipBehavior,
       cacheColorFilter: cacheColorFilter,

@@ -42,14 +42,15 @@ dependencies:
   url_launcher: ^6.2.6
   flutter_svg: ^2.0.10+1
 
-
   #UI
   another_flushbar: ^1.12.30
-
 
   #database
   shared_preferences: ^2.2.3
   flutter_secure_storage: ^9.2.2
+
+  #notifications
+  fluttertoast: ^8.2.8
 
 dev_dependencies:
   flutter_test:
@@ -84,15 +85,9 @@ flutter:
     - assets/icons/bottom_bar/
     - assets/fonts/
 
-
-
   fonts:
-    - family: CenturyGothicPaneuropean
+    - family: TTNorms
       fonts:
-        - asset: assets/fonts/CenturyGothicPaneuropeanExtraBold.ttf
-        - asset: assets/fonts/CenturyGothicPaneuropeanBold.ttf
-        - asset: assets/fonts/CenturyGothicPaneuropeanSemiBold.ttf
-        - asset: assets/fonts/CenturyGothicPaneuropeanRegular.ttf
-        - asset: assets/fonts/CenturyGothicPaneuropeanLight.ttf
+        - asset: assets/fonts/TTNorms-Medium.otf
 
 

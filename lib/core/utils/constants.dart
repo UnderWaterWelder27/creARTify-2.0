@@ -1,16 +1,11 @@
-
 class Constants {
+  static String get baseUrl => "https://pixabay.com";
+  static String user = 'Username';
+  static String apiKey = '48337082-6ac0b6aa4bb4db2be7463424b';
 
-  static String get baseUrl => "https://zenquotes.io/api/";
-
-
-  //keys
-  static String accessToken = 'accessToken';
-  static String lastQuoteIndex = 'quoteIndex';
-  static String currentUser = 'currentUser';
-  static String selectedLocation = 'selectedLocation';
-  static String selectedSortMethode = 'selectedSortMethode';
-
-
-  static String currency = '';
+  static String locale = 'uk';
+  static const List<String> supportedLocales = [
+    'en',
+    'uk',
+  ];
 }

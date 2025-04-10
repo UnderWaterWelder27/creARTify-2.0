@@ -68,7 +68,7 @@ class CommonTextField extends StatelessWidget {
     final errorBorder = OutlineInputBorder(
       borderRadius: BorderRadius.circular(16),
       borderSide: BorderSide(
-        color: colors.errorColor,
+        color: colors.activeLight,
       ),
     );
     return Column(
@@ -80,7 +80,7 @@ class CommonTextField extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 4),
             child: Text(
               title ?? '',
-              style: typography.bodyLarge?.copyWith(color: colors.text),
+              style: typography.bodyLarge?.copyWith(color: colors.textBlack),
             ),
           ),
         ),
@@ -96,7 +96,7 @@ class CommonTextField extends StatelessWidget {
           controller: controller,
           textAlign: textAlign,
           onChanged: onChanged,
-          cursorColor: colors.primary,
+          cursorColor: colors.inactiveLight,
           obscureText: obscureText,
           validator: validator,
           onTapOutside: (_) => FocusScope.of(context).unfocus(),
@@ -112,7 +112,7 @@ class CommonTextField extends StatelessWidget {
             hintText: hint,
             helperText: helperText,
             prefixIcon:  prefix,
-            hintStyle: typography.bodyLarge?.copyWith(color: colors.textSecondary),
+            hintStyle: typography.bodyLarge?.copyWith(color: colors.inactiveDark),
             suffixIcon: suffix,
             border: errorText != null ? errorBorder : null,
             enabledBorder: errorText != null ? errorBorder : null,
@@ -127,7 +127,7 @@ class CommonTextField extends StatelessWidget {
             padding: const EdgeInsets.only(top: 4),
             child: Text(
               errorText ?? '',
-              style: typography.bodyLarge?.copyWith(color: colors.errorColor),
+              style: typography.bodyLarge?.copyWith(color: colors.activeLight),
             ),
           ),
         ),

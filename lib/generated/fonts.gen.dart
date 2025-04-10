@@ -10,6 +10,6 @@
 class FontFamily {
   FontFamily._();
 
-  /// Font family: CenturyGothicPaneuropean
-  static const String centuryGothicPaneuropean = 'CenturyGothicPaneuropean';
+  /// Font family: TTNorms
+  static const String tTNorms = 'TTNorms';
 }

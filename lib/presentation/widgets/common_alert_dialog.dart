@@ -27,7 +27,7 @@ class CommonAlertDialog extends StatelessWidget {
       contentPadding: const EdgeInsets.symmetric(horizontal: 40),
       titlePadding: const EdgeInsets.fromLTRB(40, 30, 32, 10),
       actionsPadding: const EdgeInsets.symmetric(horizontal: 16),
-      backgroundColor: context.colors.cardBackGround,
+      backgroundColor: context.colors.primaryBackground,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(
           Radius.circular(15),

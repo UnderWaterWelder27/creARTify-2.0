@@ -28,7 +28,7 @@ extension WidgetExtention on Widget {
         maxHeight: height ?? MediaQuery.sizeOf(context).height * 0.66,
       ),
       isScrollControlled: isScrollControlled,
-      backgroundColor: context.colors.background,
+      backgroundColor: context.colors.primaryBackground,
       enableDrag: false,
       isDismissible: isDismissible,
       elevation: 0,

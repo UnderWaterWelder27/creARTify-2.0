@@ -36,7 +36,7 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       surfaceTintColor: Colors.transparent,
       centerTitle: true,
-      backgroundColor: colors.background,
+      backgroundColor: colors.primaryForeground,
       leading: leading ??
           IconButton(
             onPressed: onPressed ?? () => context.router.maybePop(),
@@ -52,7 +52,7 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
         child: Visibility(
           visible: elevation,
           child: Divider(
-            color: colors.borderDark,
+            color: colors.inactiveDark,
             height: 0,
           ),
         ),

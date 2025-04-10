@@ -8,19 +8,9 @@ class LocalStorage {
 
   final SharedPreferences _prefs;
 
-  bool get hasToken => getToken() != null;
-
-  String? getToken() => _prefs.getString(Constants.accessToken);
-
-  void setToken(String token) => _prefs.setString(Constants.accessToken, token);
-
-  void removeToken() => _prefs.remove(Constants.accessToken);
-
-  String? getUser() => _prefs.getString(Constants.currentUser);
-
-  void setUser(String user) => _prefs.setString(Constants.currentUser, user);
-
-  void removeUser() => _prefs.remove(Constants.currentUser);
-
+  bool get hasUser => getUser() != null;
+  String? getUser() => _prefs.getString(Constants.user);
+  void setUser(String user) => _prefs.setString(Constants.user, user);
+  void removeUser() => _prefs.remove(Constants.user);
 
 }
